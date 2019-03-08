@@ -26,6 +26,41 @@
                 font: normal normal normal 60px/1.7em dinneuzeitgroteskltw01-_812426,sans-serif;
     
                 }
+            * {box-sizing: border-box}
+               body {font-family: Arial, Helvetica, sans-serif;}
+
+            .navbar {
+            width: 100%;
+            background-color: #3973ac;
+            overflow: auto;
+                }
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 25%; /* Four links of equal widths */
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #9ebde0;
+}
+
+.navbar a.active {
+  background-color: #254a74;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
 
 
         </style>
@@ -37,6 +72,12 @@
      
     <h1>JC</h1>
     
+    <div class="navbar">
+  <a class="active" href="#">About</a> 
+  <a href="#Past work">Past work</a>
+  <a href="#">Photos</a> 
+  <a href="#">Contact</a>
+</div>
 
 </body>
 
