@@ -22,34 +22,48 @@
 
 Highcharts.chart('container', {
     title: {
-        text: 'Combination chart'
+        text: 'Ratio of autism students and corresponding coach teachers in Hong Kong'
     },
     xAxis: {
-        categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
+        categories: ['2010-2011', '2011-2012', '2012-2013', '2013-2014', '2014-2015','2015-2016','2016-2017','2017-2018']
     },
-    labels: {
-        items: [{
-            html: 'Total fruit consumption',
-            style: {
-                left: '50px',
-                top: '18px',
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
-            }
-        }]
-    },
+
     series: [{
         type: 'column',
-        name: 'Jane',
-        data: [3, 2, 1, 3, 4]
+        name: '2010-2011',
+        data: [2009, 2141,2253]
     }, {
         type: 'column',
-        name: 'John',
+        name: '2011-2012',
         data: [2, 3, 5, 7, 6]
     }, {
         type: 'column',
-        name: 'Joe',
+        name: '2012-2013',
         data: [4, 3, 3, 9, 0]
+    }, 
+    {
+        type: 'column',
+        name: '2013-2014',
+        data: [3, 2, 1, 3, 4]
     }, {
+        type: 'column',
+        name: '2014-2015',
+        data: [2, 3, 5, 7, 6]
+    }, {
+        type: 'column',
+        name: '2015-2016',
+        data: [4, 3, 3, 9, 0]
+    }, 
+    {
+        type: 'column',
+        name: '2016-2017',
+        data: [2, 3, 5, 7, 6]
+    }, {
+        type: 'column',
+        name: '2017-2018',
+        data: [4, 3, 3, 9, 0]
+    }, 
+    {
         type: 'spline',
         name: 'Average',
         data: [3, 2.67, 3, 6.33, 3.33],
@@ -57,28 +71,6 @@ Highcharts.chart('container', {
             lineWidth: 2,
             lineColor: Highcharts.getOptions().colors[3],
             fillColor: 'white'
-        }
-    }, {
-        type: 'pie',
-        name: 'Total consumption',
-        data: [{
-            name: 'Jane',
-            y: 13,
-            color: Highcharts.getOptions().colors[0] // Jane's color
-        }, {
-            name: 'John',
-            y: 23,
-            color: Highcharts.getOptions().colors[1] // John's color
-        }, {
-            name: 'Joe',
-            y: 19,
-            color: Highcharts.getOptions().colors[2] // Joe's color
-        }],
-        center: [100, 80],
-        size: 100,
-        showInLegend: false,
-        dataLabels: {
-            enabled: false
         }
     }]
 });

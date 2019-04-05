@@ -25,13 +25,13 @@ Highcharts.chart('container', {
         type: 'bar'
     },
     title: {
-        text: 'Historic World Population by Region'
+        text: 'No. of autism students and corresponding coach teachers in Hong Kong'
     },
     subtitle: {
-        text: 'Source: <a href="https://en.wikipedia.org/wiki/World_population">Wikipedia.org</a>'
+        text: 'Source: Education Bureau'
     },
     xAxis: {
-        categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
+        categories: ['2010-2011', '2011-2012', '2012-2013', '2013-2014', '2014-2015','2015-2016','2016-2017','2017-2018'],
         title: {
             text: null
         }
@@ -39,16 +39,14 @@ Highcharts.chart('container', {
     yAxis: {
         min: 0,
         title: {
-            text: 'Population (millions)',
+            text: 'No. of Autism Students/Teachers',
             align: 'high'
         },
         labels: {
             overflow: 'justify'
         }
     },
-    tooltip: {
-        valueSuffix: ' millions'
-    },
+
     plotOptions: {
         bar: {
             dataLabels: {
@@ -71,17 +69,11 @@ Highcharts.chart('container', {
         enabled: false
     },
     series: [{
-        name: 'Year 1800',
-        data: [107, 31, 635, 203, 2]
+        name: 'No. of autism students',
+        data: [2009, 2141, 2253, 2386, 2477, 2594, 2737, 2903]
     }, {
-        name: 'Year 1900',
-        data: [133, 156, 947, 408, 6]
-    }, {
-        name: 'Year 2000',
-        data: [814, 841, 3714, 727, 31]
-    }, {
-        name: 'Year 2016',
-        data: [1216, 1001, 4436, 738, 40]
+        name: 'No. of autistic support teachers',
+        data: [158, 167, 176, 189, 197, 212, 221, 236]
     }]
 });
 		</script>
