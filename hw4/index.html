@@ -1,115 +1,209 @@
 <html>
 
-
+    
 <head>
-
+    <title> Criticise the visuals </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0">
     <style>
-    
-    .currency{
-        background-color: #FFE680;
  
-    border-radius: 10px;
-    }
-    
-
-    
-        .RMB {
-            padding: 10px;
-            margin-top: 0.5em;
-            min-width: 80px;
-            min-height: 10px;
-                 
-  font-family: Arial;
-        }
-        
-        .Button {
-     
-            margin-top: 2em;
-            min-width: 10px;
-            min-height: 10px;
+ responsive-block {
+            display: block;
             position: relative;
-            margin-left: 10em;
-            margin-right: 10em;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
         }
         
-        .HKD {
-            padding: 10px;
-            margin-top: 0.5em;
-            min-width: 80px;
-            min-height: 10px;
-            
-            font-family: Arial;
+        ratio-1-to-1 responsive-block {
+            display: block;
+            position: relative;
+            padding-bottom: 100%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
         }
         
-        @media (min-width:400px) {
-            #begin {
-                display: grid;
-                grid-template-columns: 1fr;
-            }
+        ratio-4-to-3 responsive-block {
+            display: block;
+            position: relative;
+            padding-bottom: 75%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
         }
         
-        @media (min-width:700px) {
-            #begin {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
+        responsive-block iframe,
+        responsive-block object,
+        responsive-block embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
+        
+        body {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #333;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        p {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        figure {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+        figure figcaption {
+            display: block;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            font-size: 0.85em;
+        }
+        h1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            color: black;
+            text-align: center;
+        }
+        
+        h2 {
+            border-bottom: 1px solid #ccc;
+            margin-top: 6em
+        }
+        
     </style>
 </head>
 
 <body>
-    <h1>Currency Converter</h1>
-    
-    <h2>Chinese Yuan (CNY) and Hong Kong Dollar (HKD) Currency Exchange Rate Conversion Calculator</h2>
-    
-    <p>The Chinese Yuan is the currency in China (CN, CHN). 
-    The Hong Kong Dollar is the currency in Hong Kong (HK, HKG). 
-    The Chinese Yuan is also known as Yuans, RMB, and Renminbi. 
-    The exchange rate for the Chinese Yuan was last updated on March 22, 2019 from The International Monetary Fund. </p>
-   
-   <div class="currency">
-   
-    <div id="begin">
-    
- 
-    
-        <div class="RMB">
 
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAUBAMAAAAevyJ8AAAAMFBMVEUAAAD/AAD/gED//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA/N0/AAAACXBIWXMAAAp1AAAKdQFKJd39AAAAOklEQVQY02NgQAeMgihAACJghCpgiKZCyAhJCVBA2NjYGFWFsDGaFmVlRRQtgkZChoSsxeKwQSCADgCLwBO3aCxNNwAAAABJRU5ErkJggg==" class="flag">
+        <script src="../Highcharts-7.0.3/code/highcharts.js"></script>
+        <script src="../Highcharts-7.0.3/code/modules/exporting.js"></script>
+        <script src="../Highcharts-7.0.3/code/modules/export-data.js"></script>
+        
+      
+            <h1>
+                Why are these charts grouped together???
+            </h1>
+            
+            <h2>
+                Below is a surprising bumble form Forbes: three charts are grouping together unnecessarily.
+                Click <a href="https://www.forbes.com/sites/ywang/2017/08/08/xiaomi-is-once-again-worlds-biggest-smartphone-brand-but-could-it-go-further/#c03739e16916" target="_blank">here</a> to have a look at the report. 
+            </h2>
 
-            RMB: <input id="num" type="number" value="">
-        </div>
-        
-        <div class="Button">
+            <figure>
+                    <img src="Xiaomi-phone-v-competitors.png" alt="">
+                    <figcaption>
+                        <em> a graph trying to demonstrate Xiaomi's marketing performance</em>
+                    </figcaption>
+                </figure>
 
-            <button id="cal">Convert</button>
+            <p>
+                Though the three groups of data seems related, putting them together brings out some big problems.
+            </p>
 
-        </div>
-        
-    
-        <div class="HKD">
-        
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAUBAMAAAAevyJ8AAAAMFBMVEUAAAD/AAD/EBD/GBj/ISH/MTH/QkL/Skr/Y2P/hIT/ra3/zs7/5+f/7+////////98UIV5AAAACXBIWXMAAAp1AAAKdQFKJd39AAAAmElEQVR4nGNgQAeMgmAgMRlCC0AFhPYtRBWQercRVcBO+hGyQKNg3b1NGYkIgds7q1/mvHudCBe4d6970e7dchfhAvPklq/o2PduJlxA+82NpDatZQgzhNft7ujejGytcFKt7G5kAe13p/PuBSIJ9MmemidXiBAQ2rfvSN87JAHNe7cMJd8ZImkRAuKZKJ6DAySBRKgAOgAAIyA7rirH03wAAAAASUVORK5CYII=" class="flag">
-        
-            HKD: <input id="result" type="number">
-        </div>
-    </div>
-    
-   
-    
-    
-    <script>
-        // a = document.getElementById("num1").value
-        // b = document.getElementById("num2").value
-        // result = (+a) + (+b)
-        function calculate() {
-            a = +document.getElementById("num").value
-            result = (a) * 1.17
-            document.getElementById("result").value = result
-        }
-        document.getElementById("cal").addEventListener('click', calculate) // result = Math.pow(a, b)
-            // console.log('result:')
-            // console.log(result)
-    </script>
+            <ol>
+                    <li>Readers tend to find a link in between items present when there isn’t necessarily a link between them at all.Even there's a linkage, it isn't clearly shown.</li>
+                    <li>The proportions of the graphs are thrown off with comparison. While the first graph is a percentage, the second graph showing global shipments numbers in the millions.It can be quite misleading.</li>
+
+            </ol>
+
+            <p> 
+                 <strong> Better divide the dataset into three separate graphs. Below suggested a revised version of the graph:
+                </strong>
+                </p>
+            <h2>
+                    
+                    Graph 1:        
+            </h2>
+
+            <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+            <script type="text/javascript">
+
+                Highcharts.chart('container', {
+                    chart: {
+                        plotBackgroundColor: null,
+                        plotBorderWidth: null,
+                        plotShadow: false,
+                        type: 'pie'
+                    },
+                    title: {
+                        text: 'Q2 China Market Share(Smartphone brands)'
+                    },
+                    tooltip: {
+                        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                    },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            dataLabels: {
+                                enabled: true,
+                                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                                style: {
+                                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'Brands',
+                        colorByPoint: true,
+                        data: [{
+                            name: 'Xiaomi',
+                            y: 13,
+                            sliced: true,
+                            selected: true
+                        }, {
+                            name: 'OPPO',
+                            y: 18.8
+                        }, {
+                            name: 'Huawei',
+                            y: 20.2
+                        }, {
+                            name: 'Apple',
+                            y: 8.2
+                        }, {
+                            name: 'Others',
+                            y: 39.8
+                        }]
+                    }]
+                })
+                        </script>
+
+<h2>
+                    
+        Graph 2:        
+</h2>
+<figure>
+        <img src="global-shipment.png" alt="">
+    </figure>
+              
+    <h2>
+                    
+            Graph 3:        
+    </h2>
+    <figure>
+            <img src="retail-store-number.png" alt="">
+            <figcaption>
+                    <em> Source:Counterpoint Research, IDC, Xiaomi,Apple,Huawei,Chinese Media Reports</em>
+                </figcaption>
+        </figure>
 </body>
-<html>
+
+</html>
