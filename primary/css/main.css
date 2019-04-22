@@ -1,0 +1,79 @@
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+  
+  body {
+  font-family: Arial;
+  margin: 0;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background-image: url("my_photo1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  position: relative;
+  background-size: 100%
+  color: #ffffff;
+  
+}
+  
+  .navbar {
+  display: flex;
+  background-color: #9ebde0;
+}
+  
+  .navbar a {
+  color: #ffffff;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+  .navbar a:hover {
+  background-color: #254a74;
+  color: #000000;
+}
+  
+  .row {  
+  display: flex;
+  
+}
+
+  .side {
+  flex: 30%;
+  background-color:#c6d8ec;
+  padding: 20px;
+    color:white
+}
+  
+  .main {
+  flex: 70%;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+  .personalimg {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+  
+  .footer {
+  padding: 10px;
+  text-align: center;
+  background: white;
+}
+
+  @media (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+</style>
