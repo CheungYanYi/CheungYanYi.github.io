@@ -1,4 +1,9 @@
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<html>
+
+<head>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 
 	h1,
@@ -97,15 +102,19 @@ font-weight:normal;
 }
 
 </style>
+	
+	</head>
 <body>
-    <div id="wrap">
+   
         <form action="" id="cakeform" onsubmit="return false;">
         <div>
             <div class="cont_order">
                <fieldset>
 		       
+		         <img src="death.jpg" style="max-width:100%;height:auto" ;="" class=" center ">
+		       
 		       <p>人的壽命真的是一件神秘莫測的事情嗎？</>
-			       <img src="death.jpg" style="max-width:60%;height:auto" ;="" class=" center ">
+			     
 		      <p> 美國坦普爾大學神經學系教授戴安娜•伍得拉夫博士在對長壽者進行數十年跟蹤調查後，推出了一套長壽測驗題，這套測試就像一個壽命計算器，可以讓大家參考一下。
 			      發現壽命短的話，你就要好好檢視一下自己的生活習慣咯！</p>
 
@@ -127,19 +136,20 @@ font-weight:normal;
                 <option value="Lemon">已婚</option>
                 <option value="Custard">男性，已離婚</option>
                 <option value="Fudge">女性，已離婚</option>
-                <option value="Mocha">報名每月一節，資深行為治療師的治療課程(60分鐘）</option>
+                <option value="Mocha">女性不生育或 40 歲後無子女</option>
                 <option value="Raspberry">報名每星期一節，資深行為治療師的治療課程(60分鐘）</option>
                 <option value="Pineapple">報名為自閉症孩子設立的社交小組，每星期一次</option>
   
                </select>
                 <br/>
+		     <label >請按照你的生活習慣選擇：</label>
                 <p>
-                <label for='includecandles' class="inlinelabel">你也為自己報名，為自閉症兒童家長設立的家長培訓</label>
+                <label for='includecandles' class="inlinelabel">每周鍛煉 3 次</label>
                <input type="checkbox" id="includecandles" name='includecandles' onclick="calculateTotal()" />
                </p>
                
                 <p>
-                <label class="inlinelabel" for='includeinscription'>你希望每月得到一份孩子的治療報告</label>
+                <label class="inlinelabel" for='includeinscription'>愛吃果蔬</label>
                 <input type="checkbox" id="includeinscription" name="includeinscription" onclick="calculateTotal()" />
                 
                 </p>
@@ -151,7 +161,7 @@ font-weight:normal;
         	
         </div>  
        </form>
-	</div><!--End of wrap-->
+	<!--End of wrap-->
 
 <script>
 
@@ -173,7 +183,7 @@ filling_prices["None"]=0;
 filling_prices["Lemon"]=1;
 filling_prices["Custard"]=-9;
 filling_prices["Fudge"]=-5;
-filling_prices["Mocha"]=900;
+filling_prices["Mocha"]=-0.5;
 filling_prices["Raspberry"]=3600;
 filling_prices["Pineapple"]=5600;
 
@@ -206,7 +216,7 @@ function getCandlesPrice() {
 	var cakeCandles = document.getElementById('includecandles');
 
 	if(cakeCandles.checked) {
-		return(1350);
+		return(3);
 	} else {
 		return(0);
 	}
@@ -217,7 +227,7 @@ function getInscriptionPrice() {
 	var cakeInscription = document.getElementById('includeinscription');
 
 	if(cakeInscription.checked) {
-		return(1000);
+		return(2);
 	} else {
 		return(0);
 	}
@@ -227,7 +237,7 @@ function calculateTotal() {
 	var total = getCakeSizePrice() + getFillingPrice() + getCandlesPrice() + getInscriptionPrice();
 	var totalEl = document.getElementById('totalPrice');
 
-	document.getElementById('totalPrice').innerHTML = "你每月需要為孩子花費: $" + total;
+	document.getElementById('totalPrice').innerHTML = "你的預計壽命為" + total;
 	totalEl.style.display = 'block';
 }
 
@@ -239,3 +249,5 @@ function hideTotal() {
 </script>
 
 </body>
+	
+</html>
