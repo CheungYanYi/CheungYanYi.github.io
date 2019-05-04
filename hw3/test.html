@@ -99,23 +99,23 @@ font-weight:normal;
 			      發現壽命短的話，你就要好好檢視一下自己的生活習慣咯！</p>
 
 			       
-                <legend>你每個月需要為你的自閉症孩子花費多少錢？</legend>
-                <label >你懷疑你的孩子得了自閉症，你會為他她/作出以下選擇：</label>
+                <legend>算一算你的壽命有多長？</legend>
+                <label >你是男性/女性：</label>
                 <br>
                 
-                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round6" onclick="calculateTotal()" />置之不理</label><br/>
-                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round8" onclick="calculateTotal()" />你月入30,000元或以下，決定帶他/她接受自閉症兒童綜合評估及諮詢服務</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round6" onclick="calculateTotal()" />男性</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round8" onclick="calculateTotal()" />女性</label><br/>
                 <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round10" onclick="calculateTotal()" />你月入30,000元或以上，決定帶他/她接受自閉症兒童綜合評估及諮詢服務</label><br/>
                 <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round12" onclick="calculateTotal()" />你決定帶他/她，到多於一間機構接受自閉症兒童綜合評估及諮詢服務。</label><br/>
                 <br/>
-                <label >你的孩子確診了自閉症，你會為他/她安排：</label>
+                <label >你的婚姻狀況是：</label>
                 <br>
          
                 <select id="filling" name='filling' onchange="calculateTotal()">
                 <option value="None">請選擇</option>
-                <option value="Lemon">什麼也不做</option>
-                <option value="Custard">報名每月一節，普通行為治療師的治療課程(60分鐘）</option>
-                <option value="Fudge">報名每星期一節，普通行為治療師的治療課程(60分鐘）</option>
+                <option value="Lemon">已婚</option>
+                <option value="Custard">男性，已離婚</option>
+                <option value="Fudge">女性，已離婚</option>
                 <option value="Mocha">報名每月一節，資深行為治療師的治療課程(60分鐘）</option>
                 <option value="Raspberry">報名每星期一節，資深行為治療師的治療課程(60分鐘）</option>
                 <option value="Pineapple">報名為自閉症孩子設立的社交小組，每星期一次</option>
@@ -148,8 +148,8 @@ font-weight:normal;
 //The keys represent the size of the cake
 //The values represent the cost of the cake i.e A 10" cake cost's $35
 var cake_prices = new Array();
-cake_prices["Round6"]=0;
-cake_prices["Round8"]=1000;
+cake_prices["Round6"]=73;
+cake_prices["Round8"]=79;
 cake_prices["Round10"]=1800;
 cake_prices["Round12"]=3600;
 
@@ -159,9 +159,9 @@ cake_prices["Round12"]=3600;
 //We use this this array when the user selects a filling from the form
 var filling_prices = new Array();
 filling_prices["None"]=0;
-filling_prices["Lemon"]=0;
-filling_prices["Custard"]=800;
-filling_prices["Fudge"]=3200;
+filling_prices["Lemon"]=1;
+filling_prices["Custard"]=-9;
+filling_prices["Fudge"]=-5;
 filling_prices["Mocha"]=900;
 filling_prices["Raspberry"]=3600;
 filling_prices["Pineapple"]=5600;
