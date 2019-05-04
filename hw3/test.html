@@ -125,9 +125,7 @@ font-weight:normal;
                 
                 <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round6" onclick="calculateTotal()" />男性</label><br/>
                 <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round8" onclick="calculateTotal()" />女性</label><br/>
-                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round10" onclick="calculateTotal()" />你月入30,000元或以上，決定帶他/她接受自閉症兒童綜合評估及諮詢服務</label><br/>
-                <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round12" onclick="calculateTotal()" />你決定帶他/她，到多於一間機構接受自閉症兒童綜合評估及諮詢服務。</label><br/>
-                <br/>
+                 <br/>
                 <label >你的婚姻狀況是：</label>
                 <br>
          
@@ -137,9 +135,7 @@ font-weight:normal;
                 <option value="Custard">男性，已離婚</option>
                 <option value="Fudge">女性，已離婚</option>
                 <option value="Mocha">女性不生育或 40 歲後無子女</option>
-                <option value="Raspberry">報名每星期一節，資深行為治療師的治療課程(60分鐘）</option>
-                <option value="Pineapple">報名為自閉症孩子設立的社交小組，每星期一次</option>
-  
+           
                </select>
                 <br/>
 		     <label >請按照你的生活習慣選擇：</label>
@@ -171,8 +167,6 @@ font-weight:normal;
 var cake_prices = new Array();
 cake_prices["Round6"]=73;
 cake_prices["Round8"]=79;
-cake_prices["Round10"]=1800;
-cake_prices["Round12"]=3600;
 
 //Set up an associative array 
 //The keys represent the filling type
@@ -184,8 +178,7 @@ filling_prices["Lemon"]=1;
 filling_prices["Custard"]=-9;
 filling_prices["Fudge"]=-5;
 filling_prices["Mocha"]=-0.5;
-filling_prices["Raspberry"]=3600;
-filling_prices["Pineapple"]=5600;
+
 
 // getCakeSizePrice() finds the price based on the size of the cake.
 // Here, we need to take user's the selection from radio button selection
