@@ -92,8 +92,8 @@ font-weight:normal;
         <div>
             <div class="cont_order">
                <fieldset>
-                <legend>你每個月需要為你的自閉症孩子花費多少錢？</legend>
-                <label >你懷疑你的孩子得了自閉症，你會為他她/作出以下選擇：</label>
+                <legend>你每个月需要为你的自闭症孩子花费多少钱？</legend>
+                <label >你怀疑你的孩子得了自闭症，你会为她/他作出以下选择：</label>
                 <br>
                 
                 <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round6" onclick="calculateTotal()" />置之不理</label><br/>
@@ -101,27 +101,27 @@ font-weight:normal;
                 <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round10" onclick="calculateTotal()" />你月入30,000元或以上，決定帶他/她接受自閉症兒童綜合評估及諮詢服務</label><br/>
                 <label class='radiolabel'><input type="radio"  name="selectedcake" value="Round12" onclick="calculateTotal()" />你決定帶他/她，到多於一間機構接受自閉症兒童綜合評估及諮詢服務。</label><br/>
                 <br/>
-                <label >你的孩子確診了自閉症，你會為他/她安排：</label>
+                <label >你的孩子确认了自闭症，你会为他/她安排：</label>
                 <br>
          
                 <select id="filling" name='filling' onchange="calculateTotal()">
-                <option value="None">請選擇</option>
-                <option value="Lemon">什麼也不做</option>
-                <option value="Custard">報名每月一節，普通行為治療師的治療課程(60分鐘）</option>
-                <option value="Fudge">報名每星期一節，普通行為治療師的治療課程(60分鐘）</option>
-                <option value="Mocha">報名每月一節，資深行為治療師的治療課程(60分鐘）</option>
-                <option value="Raspberry">報名每星期一節，資深行為治療師的治療課程(60分鐘）</option>
-                <option value="Pineapple">報名為自閉症孩子設立的社交小組，每星期一次</option>
+                <option value="None">请选择</option>
+                <option value="Lemon">什么都不做</option>
+                <option value="Custard">报名每月一节，普通行为治疗师的治疗课程（60分钟）</option>
+                <option value="Fudge">报名每星期一节，普通行为治疗师的治疗课程（60分钟）</option>
+                <option value="Mocha">报名每月一节，资深行为治疗师的治疗课程（60分钟）</option>
+                <option value="Raspberry">报名每星期一节，资深行为治疗师的治疗课程（60分钟）</option>
+                <option value="Pineapple">报名为自闭症孩子设立的社交小组，每星期一次</option>
   
                </select>
                 <br/>
                 <p>
-                <label for='includecandles' class="inlinelabel">你也為自己報名，為自閉症兒童家長設立的家長培訓</label>
+                <label for='includecandles' class="inlinelabel">你也为自己报名，为自闭症儿童家长设立的家长培训</label>
                <input type="checkbox" id="includecandles" name='includecandles' onclick="calculateTotal()" />
                </p>
                
                 <p>
-                <label class="inlinelabel" for='includeinscription'>你希望每月得到一份孩子的治療報告</label>
+                <label class="inlinelabel" for='includeinscription'>你希望每月得到一份孩子的治疗报告</label>
                 <input type="checkbox" id="includeinscription" name="includeinscription" onclick="calculateTotal()" />
                 
                 </p>
@@ -209,7 +209,7 @@ function calculateTotal() {
 	var total = getCakeSizePrice() + getFillingPrice() + getCandlesPrice() + getInscriptionPrice();
 	var totalEl = document.getElementById('totalPrice');
 
-	document.getElementById('totalPrice').innerHTML = "你每月需要為孩子花費: $" + total;
+	document.getElementById('totalPrice').innerHTML = "你每月需要为孩子花费: $" + total;
 	totalEl.style.display = 'block';
 }
 
